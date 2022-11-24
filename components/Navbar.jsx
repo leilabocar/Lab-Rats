@@ -12,7 +12,7 @@ const Navbar = () => {
         <Link href="/"><Button variant="home">Home</Button></Link>
         <Link href="/adoption"><Button variant="secondary" >Find a Pet</Button></Link>
         <Link href="/about"><Button variant="secondary">About</Button></Link>
-        <Button variant="secondary">Contact us</Button>
+        <Link href="/Contact_Us"><Button variant="secondary">Contact Us</Button></Link>
       </div>
       <div className={styles.burgerButton}>
         <Button>Burger</Button>

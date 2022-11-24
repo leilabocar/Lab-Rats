@@ -14,7 +14,7 @@ const ContactUs = () => {
                         <h2>Call:</h2>
                         <p> 046 222 101 Monday to Friday, 9 am - 5 pm.
                         </p>
-                        <h2>Head Ofiice:</h2>
+                        <h2>Head Office:</h2>
                         <p>143 Padayon Street, Himlay, FL 69168 Imus, Cavite</p>
                   </div>
 

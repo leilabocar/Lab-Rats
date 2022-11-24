@@ -13,7 +13,7 @@ const VMGContent = () => {
                               affordable sterilization and veterinary care, and the rehabilitation and rehoming of cats and dogs in need</p3>
                   </div>
                   <div className={styles.goals}>
-                        <h1>Vision</h1>
+                        <h1>Goals</h1>
                         <ul>
                               <li> To provide veterinary consultations for low income pet owners through the CARA veterinary clinic.</li>
                               <li> To promote Trap/Neuter/Return in barangays, villages and commercial establishment.</li>

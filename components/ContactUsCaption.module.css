@@ -1,0 +1,29 @@
+.container{
+    text-align: center;
+}
+
+.label {
+    width: 100%;
+}
+
+.label > p {
+
+    width: 915px;
+    height: 172px;
+    left: 65px;
+    top: 280px;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 24px;
+    /* or 50% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+
+    color: #000000;
+}
+

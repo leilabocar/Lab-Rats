@@ -3,7 +3,7 @@
 const DonateBottom = () => {
     return (
         <div className={styles.container}>
-            <div className={styles.dbottom1}>
+            <div className={styles.bottom}>
                 <h1>How about donating in kind?</h1>
                 <h3>On our wish list:</h3>
                 <p>OBM Dry Food</p>
@@ -12,7 +12,7 @@ const DonateBottom = () => {
                 <p>FELINE GOURMET Wet Food</p>
                 <p>KITTEN Wet and Dry Food</p>
             </div>
-            <div className={styles.dbottom2}>
+            <div className={styles.dbottom}>
                 <h3>Drop-off point:</h3>
                 <p>8XW8+2CH, Carlos Trinidad Ave, Salawag, Dasmariñas, Cavite</p>
                 <p>(046) 416 4920</p>
@@ -20,4 +20,4 @@ const DonateBottom = () => {
         </div>
     );
 };
-export defa
+export default DonateBottom

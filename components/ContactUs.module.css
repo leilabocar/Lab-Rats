@@ -30,7 +30,7 @@
 
 .label > h2 {
     font-size: 64px;
-    text-align: right;
+    text-align: left;
     position: absolute;
     
     font-family: 'Times New Roman', Times, serif;
@@ -48,24 +48,44 @@
 }
 
   
-.label > p {
-    position: absolute;
-    width: 880px;
-    height: 213px;
-    left: 160px;
-    top: 496px;
+.label > p1 {
+   
+    left: 65px;
+    top: 280px;
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 24px;
+    /* or 50% */
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+    text-align: left;
+    
+    color: #000000;
+    
 
+}
+
+.label > p2 {
+    left: 290px;
+    top: 482px;
+    
     font-family: 'Times New Roman', Times, serif;
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
     line-height: 24px;
     /* or 60% */
-
+    
     display: flex;
     align-items: center;
     letter-spacing: 0.2px;
-
+    text-align: left;
+    
     color: #000000;
 
 }
@@ -88,10 +108,10 @@
 }
   
 .image > img  {
-    position: absolute;
-    width: 580px;
-    height: 667px;
+    margin: auto;
+    display: block;
     left: 852px;
     top: 162px;
+    
 }
   

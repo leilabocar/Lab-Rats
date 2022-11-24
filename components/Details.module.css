@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.dataz{
+    width: 1000px;
+    text-align: left;
+    margin-left: 10px;
+}
+.dataz h1{
+    font-size: 50px;
+    font-family: 'Cormorant';
+}
+
+.dataz p3{
+    font-size: 40px;
+    font-family: 'Cormorant';
+}
+.miney{
+    width: 1000px;
+    margin-right:100px;
+}
+.miney h1{
+    font-size: 70px;
+}
+
+.miney ul{
+    font-size: 40px;
+}
+.miney img{
+    height: 550px;
+    width: 1000px;
+    text-align: center;
+    margin-right:1000px;
+  }

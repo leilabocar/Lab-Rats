@@ -2,7 +2,20 @@
     text-align: center;
 }
 
-.container > h3{
+.container {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    
+    background: #FFFFFF;color: white;
+
+}
+
+.label {
+    width: 100%;
+}
+
+.label > h3 {
     position: absolute;
     width: 1205px;
     height: 84px;
@@ -17,15 +30,10 @@
     /* or 38% */
 
     display: flex;
-    align-items: center;
-    text-align: center;
+    text-align: left;
     letter-spacing: 0.2px;
 
     color: #000000;
-}
-
-.label {
-    width: 100%;
 }
 
 .label > h2 {
@@ -89,29 +97,14 @@
     color: #000000;
 
 }
-
-.buttons > button{
-   background-color: black;
-   color: white;
-   font-size: 35px;
-   font-family: 'Times New Roman', Times, serif;
-   border-radius: 10px;
-   margin-right: 70px;
-   cursor: pointer;
-   width: 200px;
-   height: 70px;
-
-}
-
-.buttons{
-    padding-bottom: 50px;
-}
   
 .image > img  {
-    margin: auto;
-    display: block;
-    left: 852px;
-    top: 162px;
+    position: absolute;
+    width: 659px;
+    height: 667px;
+    left: 904px;
+    top: 366px;
+    
     
 }
   

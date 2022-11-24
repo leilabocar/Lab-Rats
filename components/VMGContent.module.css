@@ -1,0 +1,40 @@
+.container {
+      display: flex;
+      justify-content: space-between;
+}
+.vision{
+      width: 400px;
+      text-align: center;
+      margin-left: 200px;
+}
+.vision h1{
+      font-size: 60px;
+}
+
+.vision p3{
+      font-size: 30px;
+}
+
+.mission{
+      width: 400px;
+      text-align: center;
+}
+.mission h1{
+      font-size: 60px;
+}
+
+.mission p3{
+      font-size: 30px;
+}
+
+.goals{
+      width: 500px;
+      margin-right: 200px;
+}
+.goals ul{
+      font-size: 30px;
+}
+.goals h1{
+      font-size: 60px;
+      text-align: center;
+}

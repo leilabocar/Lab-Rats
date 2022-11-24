@@ -1,7 +1,8 @@
 import Navbar from "../components/Navbar";
 import VMGAbout from "../components/VMGAbout";
-
+import VMGContent from "../components/VMGContent";
 import Footer from "../components/Footer";
+import AdoptionContentBottom from "../components/AdoptionContentBottom";
 
 
 function about() {
@@ -9,6 +10,8 @@ function about() {
     <div>
       <Navbar />
       <VMGAbout/>
+      <VMGContent/>
+      <AdoptionContentBottom/>
       <Footer/>
 
 

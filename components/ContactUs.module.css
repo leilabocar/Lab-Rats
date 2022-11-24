@@ -2,7 +2,8 @@
     text-align: center;
 }
 
-
+.container > h3{
+    font-size: 50px;
 }
 
 .label {

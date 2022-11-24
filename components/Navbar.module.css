@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  margin: 36px;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.navbarActions {
+  display: flex;
+  gap: 40px;
+}
+
+.burgerButton {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .navbarActions {
+    display: none;
+  }
+}

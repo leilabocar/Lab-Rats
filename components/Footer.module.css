@@ -1,0 +1,11 @@
+.container{
+      background-color: black;
+      color: white;
+      align-items: center;
+      height: 60px;
+}
+
+.container >h3{
+      text-align: center;
+      padding-top: 18px;
+}

@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
 
-function ContactUs() {
+function Contact_Us() {
   return (
     <div>
     <Navbar />
@@ -15,4 +15,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs;
+export default Contact_Us;

@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className={styles.navbarActions}>
         <Button variant="home">Home</Button>
         <Link href="/adoption"><Button variant="secondary" >Find a Pet</Button></Link>
-        <Button variant="secondary">About</Button>
+        <Link href="/about"><Button variant="secondary">About</Button></Link>
         <Button variant="secondary">Contact us</Button>
       </div>
       <div className={styles.burgerButton}>

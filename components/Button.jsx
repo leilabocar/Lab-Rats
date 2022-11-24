@@ -10,6 +10,6 @@ const Button = ({ children, variant }) => {
       <button className={styles.secondary}>{children}</button>
     </div>
   );
-};
+}
 
 export default Button;

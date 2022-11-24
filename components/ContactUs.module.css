@@ -3,7 +3,25 @@
 }
 
 .container > h3{
-    font-size: 50px;
+    position: absolute;
+    width: 1205px;
+    height: 84px;
+    left: -385px;
+    top: 218px;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 24px;
+    /* or 38% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    color: #000000;
 }
 
 .label {
@@ -15,7 +33,7 @@
     text-align: right;
     position: absolute;
     
-    font-family: 'David Libre';
+    font-family: 'Times New Roman', Times, serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -30,15 +48,33 @@
 }
 
   
-  .label > p {
-    font-size: 36px;
-    text-align: right;
-  }
+.label > p {
+    position: absolute;
+    width: 880px;
+    height: 213px;
+    left: 160px;
+    top: 496px;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 24px;
+    /* or 60% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+
+    color: #000000;
+
+}
 
 .buttons > button{
    background-color: black;
    color: white;
    font-size: 35px;
+   font-family: 'Times New Roman', Times, serif;
    border-radius: 10px;
    margin-right: 70px;
    cursor: pointer;
@@ -50,16 +86,14 @@
 .buttons{
     padding-bottom: 50px;
 }
-.image {
-    width: 100%;
-}
   
 .image > img  {
-    display: block;
     position: absolute;
     width: 580px;
     height: 667px;
     left: 852px;
     top: 162px;
+  
+   background: url(image.png);  
 }
   

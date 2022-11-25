@@ -9,8 +9,9 @@ function Contact_Us() {
     <div>
     <Navbar />
     <ContactUs/>
-    <Footer/>
     <AdoptionContentBottom/>
+    <Footer/>
+    
     
    
 

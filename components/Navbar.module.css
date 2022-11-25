@@ -3,17 +3,24 @@
   margin: 36px;
   justify-content: space-between;
   align-items: center;
+  
 
 }
 .logo > img{
   height: 169px;
   width: 250px;
-  margin-left: 65px;
+  margin-left: 45px;
+  margin-right: 20px;
 }
 
 .navbarActions {
   display: flex;
   gap: 10px;
+  border-top: 5px solid #000;
+  padding-top: 10px;
+  border-bottom: 5px solid #000;
+  padding-bottom: 14px;
+  
 }
 
 .burgerButton {

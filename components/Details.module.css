@@ -3,22 +3,29 @@
     justify-content: space-between;
 }
 .dataz{
-    width: 1000px;
-    text-align: left;
-    margin-left: 10px;
+    width: 850px;
+    text-align: center;
+    margin-left: 3px;
 }
 .dataz h1{
-    font-size: 50px;
+    display: flex;
+    font-size: 43px;
     font-family: 'Cormorant';
+    background: rgba(217, 217, 217, 0.3);
 }
-
-.dataz p3{
+.data{
+    width: 850px;
+    text-align: left;
+    margin-left: 3px;
+}
+.data p3{
+    display: flex;
     font-size: 40px;
     font-family: 'Cormorant';
 }
 .miney{
     width: 1000px;
-    margin-right:100px;
+    margin-right:80px;
 }
 .miney h1{
     font-size: 70px;

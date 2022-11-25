@@ -22,11 +22,13 @@
       padding: 100px 0px 0px 0px;
       font-size: 55px;
       line-height: 24px;
+      letter-spacing: 0.2px;
 }
 
 .vision .text > p3{
       line-height: 24px;
       font-size: 30px;
+      font-weight: 400;
 }
 
 .mission{

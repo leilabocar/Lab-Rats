@@ -1,12 +1,13 @@
 import styles from "./AdoptionContentBottom.module.css";
+import Link from "next/link";
 
 const AdoptionContentBottom = ({ }) => {
   return (
     <div className={styles.container}>
       <div className={styles.buttons}>
-            <button variant="primary"><img src="/images/fb.png" /></button>
-            <button variant="primary"><img src="/images/twt.png" /></button>
-            <button variant="primary"><img src="/images/ig.png" /></button>
+            <Link href="#" className={styles.button}><img src="/images/fb.png"></img></Link>
+            <Link href="#" className={styles.button}><img src="/images/twt.png" /></Link>
+            <Link href="#" className={styles.button}><img src="/images/ig.png" /></Link>
       </div>
     </div>
   );

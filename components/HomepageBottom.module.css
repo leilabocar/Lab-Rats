@@ -1,22 +1,37 @@
 .container{
-      text-align: center;    
+      text-align: center;
 }
 
 .container > h3{
       font-size: 50px;
 }
 
-.buttons > button{
+.buttons .button{
      background-color: black;
      color: white;
-     font-size: 35px;
+     font-size: 30px;
      border-radius: 10px;
      margin-right: 70px;
      cursor: pointer;
      width: 200px;
      height: 70px;
-
+     padding: 10px 10px 10px 10px;
+     font-family: Cormorant;
 }
+
+.buttons .button:hover{
+      background-color: gray;
+      color: white;
+      font-size: 30px;
+      border-radius: 10px;
+      margin-right: 70px;
+      cursor: pointer;
+      width: 200px;
+      height: 70px;
+      padding: 10px 10px 10px 10px;
+      font-family: Cormorant;
+ }
+ 
 
 .buttons{
       padding-bottom: 50px;

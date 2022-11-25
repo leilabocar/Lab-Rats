@@ -9,9 +9,9 @@ const HomepageBottom = () => {
             <div className={styles.container}>
                   <h3>Looking for unconditional love? Visit the shelter today!</h3>
             <div className={styles.buttons}>
-                  <Button>DONATE</Button>
-                  <Link href="/sponsor"><Button>SPONSOR</Button></Link>
-                  <Button>ADOPT</Button>
+                  <Link href="/donate" className={styles.button}>DONATE</Link>
+                  <Link href="/sponsor" className={styles.button}>SPONSOR</Link>
+                  <Link href="" className={styles.button}>ADOPT</Link>
             </div>
       </div>
       );

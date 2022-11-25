@@ -1,0 +1,49 @@
+.container{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container > h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 24px;
+    /* or 38% */
+
+    display: flex;
+    align-items: Left;
+    text-align: Left;
+    letter-spacing: 0.2px;
+    margin-left: 4rem;
+
+    color: #000000;
+}
+
+.message > h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 24px;
+    /* or 38% */
+
+    display: flex;
+    align-items: Left;
+    text-align: Left;
+    letter-spacing: 0.2px;
+    margin-left: 4rem;
+    padding-top: 15px;
+
+    color: #000000;
+}
+
+.message > h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    margin-left: 4rem;
+    text-align: justify;
+    padding: 70px;
+}

@@ -1,99 +1,80 @@
 .container{
-    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.container > h3{
-    position: absolute;
-    width: 1205px;
-    height: 84px;
-    left: -385px;
-    top: 218px;
-
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
+.header > h1{
     font-weight: 700;
     font-size: 64px;
     line-height: 24px;
-    /* or 38% */
-
+    margin-left: 3rem;
+    margin-top: 5rem;
     display: flex;
-    align-items: center;
-    text-align: center;
+    text-align: left;
     letter-spacing: 0.2px;
+
+    color: #000000;
+}
+
+.header > h2 {
+    position: absolute;
+    z-index: 90;
+    font-size: 40px;
+    text-align: left;
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 24px;
+    margin-left: 3rem;
+
+    align-items: center;
 
     color: #000000;
 }
 
 .label {
-    width: 100%;
+    margin-top: 5rem;
+    margin-left: 4rem;
 }
-
-.label > h2 {
-    font-size: 64px;
-    text-align: right;
-    position: absolute;
-    
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
-    font-weight: 700;
+.label1 > h2 {
     font-size: 40px;
-    line-height: 24px;
-    /* or 60% */
-
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.2px;
-
-    color: #000000;
+    display: inline-block;
 }
 
-  
-.label > p {
-    position: absolute;
-    width: 880px;
-    height: 213px;
-    left: 160px;
-    top: 496px;
-
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
-    font-weight: 400;
+.label1 > p {
+    display: inline-block;
     font-size: 40px;
-    line-height: 24px;
-    /* or 60% */
-
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.2px;
-
-    color: #000000;
-
+    margin-left: 7%;
 }
 
-.buttons > button{
-   background-color: black;
-   color: white;
-   font-size: 35px;
-   font-family: 'Times New Roman', Times, serif;
-   border-radius: 10px;
-   margin-right: 70px;
-   cursor: pointer;
-   width: 200px;
-   height: 70px;
-
+.label2 > h2 {
+    font-size: 40px;
+    display: inline-block;
 }
 
-.buttons{
-    padding-bottom: 50px;
+.label2 > p {
+    display: inline-block;
+    font-size: 40px;
+    margin-left: 9%;
 }
-  
-.image > img  {
+
+.label2 > img {
     position: absolute;
-    width: 580px;
+    z-index: 0;
+    right: 0px;
+    bottom: 0px;
+    width: 659px;
     height: 667px;
-    left: 852px;
-    top: 162px;
-
-    background: url(image.png);
 }
-  
+
+.label3 > h2 {
+    font-size: 40px;
+    display: inline-block;
+}
+
+.label3 > p {
+    display: inline-block;
+    font-size: 40px;
+    margin-left: 1%;
+}
+

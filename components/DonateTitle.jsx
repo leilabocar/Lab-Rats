@@ -1,4 +1,6 @@
-const Donate = () => {
+import styles from "./DonateTitle.module.css";
+
+const DonateTitle = () => {
     return (
         <div className={styles.container}>
             <h1>Donate</h1>
@@ -13,3 +15,4 @@ const Donate = () => {
     </div>
     );
  };
+ export default DonateTitle;

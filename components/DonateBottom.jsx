@@ -1,4 +1,4 @@
-
+import styles from "./DonateBottom.module.css";
 
 const DonateBottom = () => {
     return (

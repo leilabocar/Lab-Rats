@@ -1,3 +1,5 @@
+import styles from "./DonateTitle.module.css";
+
 const DonateTitle = () => {
     return (
         <div className={styles.container}>

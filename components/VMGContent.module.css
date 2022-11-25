@@ -4,7 +4,7 @@
 }
 .vision{
       display: flex;
-      font-family: Cormorant;
+      font-family: 'Cormorant';
       background: rgba(217, 217, 217, 0.3);
 }
 .vision .pic{

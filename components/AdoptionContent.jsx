@@ -1,4 +1,5 @@
 import styles from "./AdoptionContent.module.css";
+import Link from "next/link";
 
 const AdoptionContent = ({ }) => {
   return (
@@ -9,11 +10,12 @@ const AdoptionContent = ({ }) => {
             <p>3 Months old Male Dog,Friendly,Playful</p>
       </div>
       <div className={styles.animals2}>
-            <img src="/images/cat.jpg" />
+          <Link href ="/details" className={styles.animals2}><img src="/images/cat.jpg"></img></Link>
             <p>Name: Miney </p>
             <p>3 Months old Female Cat,Friendly,Playful</p>
       </div>
     </div>
+
   );
 };
 

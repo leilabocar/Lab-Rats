@@ -1,11 +1,17 @@
+.container{
+      width: auto;
+      height: auto;
+      padding-left: 50px;
+      padding-right: 50px;
+}
 .container p1{
       font-size: 50px;
       font-weight: bold;
-      font-family: 'Times New Roman', Times, serif;
+      font-family: Cormorant;
 }
 
 .container p2{
       font-size: 33px;
-      font-family: 'Times New Roman', Times, serif;
+      font-family: Cormorant;
 
 }

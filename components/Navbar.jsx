@@ -9,7 +9,7 @@ const Navbar = () => {
         <img src="/logo/logo.png" />
       </div>
       <div className={styles.navbarActions}>
-        <Link href="/"><Button variant="home">Home</Button></Link>
+        <Link href="/"><Button variant="primary">Home</Button></Link>
         <Link href="/adoption"><Button variant="secondary" >Find a Pet</Button></Link>
         <Link href="/about"><Button variant="secondary">About</Button></Link>
         <Link href="/Contact_Us"><Button variant="secondary">Contact Us</Button></Link>

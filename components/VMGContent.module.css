@@ -5,7 +5,8 @@
 .vision{
       width: 400px;
       text-align: center;
-      margin-left: 200px;
+      margin-left: 100px;
+      font-family: Cormorant;
 }
 .vision h1{
       font-size: 60px;
@@ -17,6 +18,7 @@
 
 .mission{
       width: 400px;
+      font-family: Cormorant;
       text-align: center;
 }
 .mission h1{
@@ -28,8 +30,9 @@
 }
 
 .goals{
-      width: 500px;
-      margin-right: 200px;
+      width: 555px;
+      margin-right: 100px;
+      font-family: Cormorant;
 }
 .goals ul{
       font-size: 30px;

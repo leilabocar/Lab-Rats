@@ -1,43 +1,83 @@
 .container {
-      display: flex;
+      display: block;
       justify-content: space-between;
 }
 .vision{
-      width: 400px;
-      text-align: center;
-      margin-left: 100px;
+      display: flex;
       font-family: Cormorant;
+      background: rgba(217, 217, 217, 0.3);
 }
-.vision h1{
-      font-size: 60px;
+.vision .pic{
+      margin: 51px 40px 51px 138px;
+}
+.vision .pic >img{
+      height: 397px;
+      width: 620px;
 }
 
-.vision p3{
+.vision .text{
+      margin-right: 250px;
+}
+.vision .text > h1{
+      padding: 100px 0px 0px 0px;
+      font-size: 55px;
+      line-height: 24px;
+}
+
+.vision .text > p3{
+      line-height: 24px;
       font-size: 30px;
 }
 
 .mission{
-      width: 400px;
+      display: flex;
       font-family: Cormorant;
-      text-align: center;
 }
-.mission h1{
-      font-size: 60px;
+.mission .pic{
+      margin: 51px 138px 51px 40px;
+}
+.mission .pic >img{
+      height: 397px;
+      width: 620px;
 }
 
-.mission p3{
+.mission .text{
+      margin-left: 250px;
+}
+.mission .text > h1{
+      padding: 100px 0px 0px 0px;
+      font-size: 55px;
+      line-height: 24px;
+}
+
+.mission .text > p3{
+      line-height: 24px;
       font-size: 30px;
 }
 
 .goals{
-      width: 555px;
-      margin-right: 100px;
+      display: flex;
       font-family: Cormorant;
+      background: rgba(217, 217, 217, 0.3);
 }
-.goals ul{
+.goals .pic{
+      margin: 51px 40px 51px 138px;
+}
+.goals .pic >img{
+      height: 397px;
+      width: 620px;
+}
+
+.goals .text{
+      margin-right: 250px;
+}
+.goals .text > h1{
+      padding: 80px 0px 0px 0px;
+      font-size: 55px;
+      line-height: 24px;
+}
+
+.goals .text > ul{
+      line-height: 24px;
       font-size: 30px;
-}
-.goals h1{
-      font-size: 60px;
-      text-align: center;
 }

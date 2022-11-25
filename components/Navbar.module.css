@@ -5,10 +5,15 @@
   align-items: center;
 
 }
+.logo > img{
+  height: 169px;
+  width: 250px;
+  margin-left: 65px;
+}
 
 .navbarActions {
   display: flex;
-  gap: 40px;
+  gap: 10px;
 }
 
 .burgerButton {

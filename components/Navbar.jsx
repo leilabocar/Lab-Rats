@@ -5,7 +5,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.logo}>
         <img src="/logo/logo.png" />
       </div>
       <div className={styles.navbarActions}>

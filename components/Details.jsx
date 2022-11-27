@@ -20,7 +20,7 @@ const Details = ({}) => {
                               Look no further than Miney if you're looking for a nice girl with a face as sweet as honey!</h1><br></br>
                               <div className={styles.data}>
                           <p3>Thank you for your interest in adoption! We are open to process adoptions on a walk-in basis Tuesday – Friday from 1 p.m. to 6 p.m.
-                              On Saturdays, adoptions are from 12 – 4 p.m. and Sundays are by appointment only.</p3>
+                              On Saturdays, adoptions are from 12 – 4 p.m. and Sundays are by appointment only.</p3><br></br>
                       </div>
                   </div>
             </div>

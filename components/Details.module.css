@@ -1,31 +1,37 @@
 .container {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
 }
 .dataz{
-    width: 850px;
+    width: 800px;
     text-align: center;
     margin-left: 3px;
+    display: inline-block;
 }
 .dataz h1{
     display: flex;
     font-size: 43px;
     font-family: 'Cormorant';
     background: rgba(217, 217, 217, 0.3);
+    height: 550px;
 }
 .data{
-    width: 850px;
+    width: 800px;
     text-align: left;
-    margin-left: 3px;
+    height: 500px;
 }
 .data p3{
+    margin-top: 80px;
     display: flex;
     font-size: 40px;
     font-family: 'Cormorant';
+    letter-spacing: 0.2px;
 }
 .miney{
-    width: 1000px;
-    margin-right:80px;
+    display: inline-block;
+    width: 800px;
 }
 .miney h1{
     font-size: 70px;
@@ -35,8 +41,6 @@
     font-size: 40px;
 }
 .miney img{
-    height: 550px;
-    width: 1000px;
-    text-align: center;
-    margin-right:1000px;
+    height: 650px;
+    width: 800px;
   }

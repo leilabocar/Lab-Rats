@@ -6,7 +6,8 @@ const ContactUs = () => {
                   <div className={styles.header}>
                         {/* <img src="/images/image 1.png" /> */}
                         <h1>Contact</h1>
-                        <h2> If you have questions about donations or other ways you can help LABRATS: </h2>
+                        <h2> If you have questions about donations or other ways you  </h2>
+                        <h2> can help LABRATS: </h2>
                   </div>
                   <div className={styles.label}>
                         <div className={styles.label1}>

@@ -16,7 +16,6 @@
 }
 
 .header > h2 {
-    position: absolute;
     z-index: 90;
     font-size: 40px;
     text-align: left;
@@ -33,7 +32,7 @@
 }
 
 .label {
-    margin-top: 5rem;
+    margin-top: 1rem;
     margin-left: 4rem;
 }
 .label1 > h2 {
@@ -62,7 +61,7 @@
     position: absolute;
     z-index: 0;
     right: 0px;
-    bottom: 0px;
+    bottom: 65px;
     width: 659px;
     height: 667px;
 }

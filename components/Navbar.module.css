@@ -1,21 +1,21 @@
 .container {
   display: flex;
-  margin: 36px;
+  margin: 30px;
   justify-content: space-between;
   align-items: center;
   
 
 }
 .logo > img{
-  height: 169px;
-  width: 250px;
-  margin-left: 45px;
-  margin-right: 20px;
+  height: 129px;
+  width: 210px;
+  margin-left: 10px;
+  margin-right: 5px;
 }
 
 .navbarActions {
   display: flex;
-  gap: 10px;
+  gap: 2px;
   border-top: 5px solid #000;
   padding-top: 10px;
   border-bottom: 5px solid #000;

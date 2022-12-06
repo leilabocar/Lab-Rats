@@ -11,7 +11,7 @@ const HomepageBottom = () => {
             <div className={styles.buttons}>
                   <Link href="/donate" className={styles.button}>DONATE</Link>
                   <Link href="/sponsor" className={styles.button}>SPONSOR</Link>
-                  <Link href="" className={styles.button}>ADOPT</Link>
+                  <Link href="/adoption" className={styles.button}>ADOPT</Link>
             </div>
       </div>
       );

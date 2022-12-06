@@ -1,16 +1,16 @@
 .container p1{
-    font-size: 80px;
+    font-size: 70px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
 }
 .container{
-  position: relative;
-width: 1440px;
-height: 1024px;
+ position: relative;
+  height: 980px;
+  width: 1300px;
 }
 .container p2{
-    font-size: 45px;
-    margin-left: 40px;
+    font-size: 35px;
+    margin-left: 30px;
     font-family: 'Times New Roman', Times, serif;
 
 }
@@ -18,13 +18,13 @@ height: 1024px;
 .h1{
 position: absolute;
 height: 84px;
-left: 70px;
+left: 45px;
 
 font-family: 'Cormorant';
 font-style: normal;
 font-weight: 700;
 font-size: 64px;
-line-height: 24px;
+line-height: 20px;
 /* or 38% */
 
 letter-spacing: 0.2px;
@@ -32,8 +32,8 @@ letter-spacing: 0.2px;
 
 .h2{
   position: absolute;
-left: 70px;
-top: 100px;
+  left: 45px;
+top: 80px;
 
 font-family: 'Cormorant';
 font-style: normal;
@@ -50,8 +50,9 @@ letter-spacing: 0.2px;
 
 .h3{
   position: absolute;
-  left: 152px;
+  left: 100px;
   top: 200px;
+  width: auto;
   
   font-family: 'Cormorant';
   font-style: normal;
@@ -67,7 +68,7 @@ letter-spacing: 0.2px;
 
 .h4{
   position: absolute;
-  left: 152px;
+  left: 100px;
   top: 300px;
   
   font-family: 'Cormorant';
@@ -83,7 +84,7 @@ letter-spacing: 0.2px;
 }
 .h5{
   position: absolute;
-  left: 152px;
+  left: 100px;
   top:350px;
   
   font-family: 'Cormorant';
@@ -100,7 +101,7 @@ letter-spacing: 0.2px;
 
 .h6{
   position: absolute;
-  left: 152px;
+  left: 100px;
   top: 400px;
   
   font-family: 'Cormorant';
@@ -117,7 +118,7 @@ letter-spacing: 0.2px;
 
 .h7{
   position: absolute;
-  left: 70px;
+  left: 45px;
   top: 500px;
   
   font-family: 'Cormorant';
@@ -133,7 +134,7 @@ letter-spacing: 0.2px;
 }
 
 .h8{
-  width: 896px;
+  width: 760px;
   position: absolute;
   left: 108px;
   top: 550px;
@@ -151,9 +152,9 @@ letter-spacing: 0.2px;
 
   .box {
     position: absolute;
-    width: 550px;
+    width: 500px;
     height: 300px;
-    left: 1023px;
+    left: 850px;
     top: 584px;
     background-color: #d3d4d4;
     color: rgb(217, 217, 217, 0.6);

@@ -5,7 +5,7 @@ const VMGContent = () => {
             <div className={styles.container}>
                   <div className={styles.vision}>
                         <div className={styles.pic}>
-                              <img src="/images/image 2.png" />
+                              <Image src="/images/image 2.png" />
                         </div>
                         <div className={styles.text}>
                               <h1>Vision</h1>
@@ -19,12 +19,12 @@ const VMGContent = () => {
                                     affordable sterilization and veterinary care, and the rehabilitation and rehoming of cats and dogs in need</p3>
                         </div>
                         <div className={styles.pic}>
-                              <img src="/images/image 3.png" />
+                              <Image src="/images/image 3.png" />
                         </div>
                   </div>
                   <div className={styles.goals}>
                         <div className={styles.pic}>
-                              <img src="/images/image 4.png" />
+                              <Image src="/images/image 4.png" />
                         </div>
                         <div className={styles.text}>
                               <h1>Goals</h1>

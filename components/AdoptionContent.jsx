@@ -5,12 +5,12 @@ const AdoptionContent = ({ }) => {
   return (
     <div className={styles.container}>
       <div className={styles.animals1}>
-            <img src="/images/dog.jpg" />
+            <Image src="/images/dog.jpg" />
             <p>Name: Bruno </p>
             <p>3 Months old Male Dog,Friendly,Playful</p>
       </div>
       <div className={styles.animals2}>
-          <Link href ="/details" className={styles.animals2}><img src="/images/cat.jpg"></img></Link>
+          <Link href ="/details" className={styles.animals2}><Image src="/images/cat.jpg"></Image></Link>
             <p>Name: Miney </p>
             <p>3 Months old Female Cat,Friendly,Playful</p>
       </div>

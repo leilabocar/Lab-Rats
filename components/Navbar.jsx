@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
-        <img src="/logo/logo.png" />
+        <Image src="/logo/logo.png" />
       </div>
       <div className={styles.navbarActions}>
         <Link href="/"><Button variant="secondary">Home</Button></Link>

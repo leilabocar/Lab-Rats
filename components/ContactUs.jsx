@@ -17,7 +17,7 @@ const ContactUs = () => {
                         <div className={styles.label2}>
                               <h2>Call:</h2>
                               <p> 046 222 101 Monday to Friday, 9 am - 5 pm.</p>
-                              <img src="/images/image 1.png" />
+                              <Image src="/images/image 1.png" />
                         </div>
                         <div className={styles.label3}>
                               <h2>Head Office:</h2> 

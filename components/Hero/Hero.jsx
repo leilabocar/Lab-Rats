@@ -11,7 +11,7 @@ const Hero = ({ }) => {
           <Link href="#" className={styles.button}><img src="/images/ig.png" alt="icon only"/></Link>
       </div>
       <div className={styles.cover}>
-        <img src="{/images/dogandcatcover.png}" alt="dog and cat"/>
+        <img src="/images/dogandcatcover.png" alt="dog and cat"/>
       </div>
       <div className={styles.data}>
         <div className={styles.datas}>

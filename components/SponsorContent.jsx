@@ -30,9 +30,9 @@ const sponsor = () => {
                      (Do let us know if you wish to remain anonymous.)</p></div>    
                   <div className={styles.box}> 
                     <p1> Sponsor a pet by donating to any of these channels:</p1>
-                  <div className={styles.gfg}> <Image src="/images/paypal.png" alt="icon only"/> <p1>paypal.com/paypalme/labrats</p1></div>
-                  <div className={styles.gfg1}> <Image src="/images/bdo.png" alt="icon only"/> <p1>10215659345413</p1></div>
-                  <div className={styles.gfg2}> <Image src="/images/gcash.png" alt="icon only"/> <p1>Send to 09958926020 Lyn S.</p1></div>
+                  <div className={styles.gfg}> <img src="/images/paypal.png" alt="icon only"/> <p1>paypal.com/paypalme/labrats</p1></div>
+                  <div className={styles.gfg1}> <img src="/images/bdo.png" alt="icon only"/> <p1>10215659345413</p1></div>
+                  <div className={styles.gfg2}> <img src="/images/gcash.png" alt="icon only"/> <p1>Send to 09958926020 Lyn S.</p1></div>
                     
                   </div>    
             </div>

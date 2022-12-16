@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styles from "./VMGContent.module.css";
 
 const VMGContent = () => {

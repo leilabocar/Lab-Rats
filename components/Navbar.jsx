@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Button from "./Button";
 import styles from "./Navbar.module.css";
 import Link from "next/link";

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styles from "./ContactUs.module.css";
 
 const ContactUs = () => {

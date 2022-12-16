@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styles from "./AdoptionContent.module.css";
 import Link from "next/link";
 

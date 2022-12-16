@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styles from "./DetailsBottom.module.css";
 import Link from "next/link";
 

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styles from "./SponsorContent.module.css";
 
 const sponsor = () => {

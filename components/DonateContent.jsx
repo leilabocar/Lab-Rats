@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styles from "./DonateContent.module.css";
 
 const DonateContent = () => {

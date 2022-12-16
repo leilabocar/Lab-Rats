@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styles from "./AdoptionContentBottom.module.css";
 import Link from "next/link";
 

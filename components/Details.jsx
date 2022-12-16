@@ -4,7 +4,7 @@ const Details = ({}) => {
       return (
         <div className={styles.container}>
             <div className={styles.miney}>
-            <Image src="/images/cat.jpg" />
+            <Image src="/images/cat.jpg" alt="picture of a cat"/>
               <h1>Miney</h1>
                       <ul>
                           <li> Female</li>

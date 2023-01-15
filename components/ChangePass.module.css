@@ -8,7 +8,7 @@
       transform: translate(-50%, -50%);
       height: 100%;
       width: 100%;
-      max-width: 1300px;
+      max-width: 800px;
 }
 .logo{
       text-align: center;
@@ -26,12 +26,12 @@
       text-align: center;
 }
 .title > h1 {
-      font-size: 60px;
+      font-size: 50px;
       margin: 0px;
-      font-weight: normal;
+      font-weight: bold;
 }
 .title > h6 {
-      font-size: 25px;
+      font-size: 15px;
       margin: 0px;
       color: #A9A4A4;
       margin-bottom: 20px;
@@ -47,6 +47,9 @@
       font-family: 'EB Garamond';
       text-align: center;
 }
+.input_container{
+      margin-top: 20px;
+}
 
 .main_input_container{
       position: relative;
@@ -54,7 +57,7 @@
       text-align: center;
       border-radius: 21px;
       width: 100%;
-      max-width: 1300px;
+      max-width: 800px;
 }
 .main_input_container > h3{
       font-size: 30px;
@@ -78,20 +81,25 @@
       opacity: 1;
       padding-left: 10px;
 }
+.buttons{
+      display: flex;
+      justify-content: space-between;
+}
 
 .button {
   background-color: #1328E7;
   border-radius: 8px;
   border-width: 0;
-  max-width: 800px;
-  height: 30px;
+  height: 50px;
   width: 100%;
+  max-width: 400px;
   font-size: large;
   font-family: 'EB Garamond';
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 20px;
   color: white;
+  padding: 0px 60px 0px 60px ;
 }
 .button:hover{
       background-color: rgb(11, 11, 124);

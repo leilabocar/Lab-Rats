@@ -5,6 +5,9 @@ import Link from "next/link";
 const ForgotPass = ({ }) => {
   return (
     <div className={styles.container}>
+      <div className={styles.logo}>
+            <img src="/forgot_logo.png"></img>
+      </div>
       <div className={styles.title}>
             <h1>Forgot Password?</h1>
             <h6>No worries, we'll send you reset instructions.</h6>

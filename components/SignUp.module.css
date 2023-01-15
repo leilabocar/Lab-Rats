@@ -2,7 +2,6 @@
       display: grid;  
       justify-content: center; /* Horizontal */  
       align-content: center;
-      background-color: white;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -26,13 +25,14 @@
       margin: 0px;
 }
 
-.small{
-      font-size: small;
-      text-align: end;
-      padding-right: 35px;
+.small > h2{
+      font-size: 17px;
+      padding-bottom: 10px;
+      font-family: 'EB Garamond';
 }
 
 .main_input_container{
+      position: relative;
       margin-top: 10px;
       text-align: center;
       border-radius: 21px;
@@ -41,27 +41,50 @@
       max-width: 1300px;
       padding: 0px 100px 0px 100px;
 }
+.main_input_container > h3{
+      font-size: 30px;
+      font-family: 'EB Garamond';
+      font-weight: normal;
+}
+.input_container{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1000px;
+}
+
 .input_container > h3{
       font-family: 'EB Garamond';
       font-size: 30px;
       font-weight: normal;
       width: 100%;
-      max-width: 700px;
+      max-width: 800px;
       padding: 0px 200px 0px 200px;
 }
 .labels {
       font-family: 'EB Garamond';
       font-size: 25px;
+      text-align: start;
+      width: 100%;
+      max-width: 650px;
+      padding-left: 10px;
 }
 
+.inputs{
+      text-align: start;
+      width: 100%;
+      max-width: 800px;
+      padding-right: 10px;
+}
 .input_container input {
       width: 100%;
-      max-width: 300px;
+      max-width: 500px;
       height: 33px;
       background: #7e7070;
       border-radius: 8px;
       border: 0px;
       color: white;
+      font-family: 'EB Garamond';
       font-size: 18px;
       margin-top: 10px;
 }
@@ -76,6 +99,7 @@
   font-size: large;
   font-family: 'EB Garamond';
   font-weight: bold;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .button:hover{

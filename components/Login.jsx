@@ -34,7 +34,7 @@ const Login = ({ }) => {
             <div className={styles.buttons}>
                   <button className={styles.button} role="button">Login</button>
             </div>
-            <h2>New Here? <Link href="#" className={styles.links}>Sign Up?</Link></h2>
+            <h2>New Here? <Link href="/SignUp" className={styles.links}>Sign Up?</Link></h2>
       </form>
     </div>
   );

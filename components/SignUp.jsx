@@ -1,8 +1,8 @@
 /* eslint-disable */
-import styles from "./Login.module.css";
+import styles from "./SignUp.module.css";
 import Link from "next/link";
 
-const Login = ({ }) => {
+const SignUp = ({ }) => {
   return (
     <div className={styles.container}>
       <div className={styles.title}>
@@ -10,34 +10,49 @@ const Login = ({ }) => {
             <h6>by Lab Rats</h6>
       </div>
       <form className={styles.main_input_container}>
+            <h3>Sign Up</h3>
             <div className={styles.input_container}>
-                  <h3>Login</h3>
-                  <span>
-                        <label className={styles.labels}>Username:</label>
-                  </span>
-                  <span>
-                        <input type="text" name="username" required />
-                  </span>
+                  <div className={styles.labels}>
+                        <label>Username </label>
+                  </div>
+                  <div className={styles.inputs}>
+                        <input type="text" name="password" required />
+                  </div>
             </div>
             <div className={styles.input_container}>
-                  <span>
-                        <label className={styles.labels}>Password: </label>
-                  </span>
-                  <span>
+                  <div className={styles.labels}>
+                        <label>Email: </label>
+                  </div>
+                  <div className={styles.inputs}>
+                        <input type="text" name="password" required />
+                  </div>
+            </div>
+            <div className={styles.input_container}>
+                  <div className={styles.labels}>
+                        <label>Password: </label>
+                  </div>
+                  <div className={styles.inputs}>
                         <input type="password" name="password" required />
-                  </span>
-                  
+                  </div>
             </div>
-            <div className={styles.small}>
-                  <Link href="#" className={styles.links}><h3>Forgot Password?</h3></Link>
+            <div className={styles.input_container}>
+                  <div className={styles.labels}>
+                        <label>Re-enter Password </label>
+                  </div>
+                  <div className={styles.inputs}>
+                        <input type="password" name="password" required />
+                  </div>
             </div>
             <div className={styles.buttons}>
-                  <button className={styles.button} role="button">Login</button>
+                  <button className={styles.button} role="button">Sign Up</button>
             </div>
-            <h2>New Here? <Link href="#" className={styles.links}>Sign Up?</Link></h2>
+            <div className={styles.small}>
+            <h2>Already have an account? <Link href="/" className={styles.links}>Login</Link></h2>
+            </div>
+            
       </form>
     </div>
   );
 };
 
-export default Login;
+export default SignUp;

@@ -43,12 +43,11 @@
 
 .small > h2{
       font-size: 17px;
-      padding-bottom: 10px;
       font-family: 'EB Garamond';
       text-align: center;
 }
 .input_container{
-      margin-top: 20px;
+      margin-top: 10px;
 }
 
 .main_input_container{

@@ -1,6 +1,6 @@
 /* eslint-disable */
-// import styles from "./Hero.module.css";
-// import Link from "next/link";
+import styles from "./Login.style.css";
+import Link from "next/link";
 
 const Login = ({ }) => {
   return (

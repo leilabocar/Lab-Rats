@@ -1,0 +1,89 @@
+.container{
+      display: grid;  
+      justify-content: center; /* Horizontal */  
+      align-content: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      width: 100%;
+      max-width: 1300px;
+}
+.title {
+      font-family: 'EB Garamond';
+      gap: 0px;
+      text-align: center;
+}
+.title > h1 {
+      font-size: 60px;
+      margin: 0px;
+      font-weight: normal;
+}
+.title > h6 {
+      font-size: 25px;
+      margin: 0px;
+      color: #A9A4A4;
+      margin-bottom: 20px;
+}
+.labels {
+      font-family: 'EB Garamond';
+      font-size: 25px;
+}
+
+.small > h2{
+      font-size: 17px;
+      padding-bottom: 10px;
+      font-family: 'EB Garamond';
+      text-align: center;
+}
+
+.main_input_container{
+      position: relative;
+      margin-top: 10px;
+      text-align: center;
+      border-radius: 21px;
+      width: 100%;
+      max-width: 1300px;
+}
+.main_input_container > h3{
+      font-size: 30px;
+      font-family: 'EB Garamond';
+      font-weight: normal;
+}
+.main_input_container input {
+      width: 100%;
+      max-width: 800px;
+      height: 33px;
+      background: #7e7070;
+      border-radius: 8px;
+      border: 0px;
+      color: white;
+      font-family: 'EB Garamond';
+      font-size: 18px;
+}
+
+.button {
+  background-color: #1328E7;
+  border-radius: 8px;
+  border-width: 0;
+  max-width: 800px;
+  height: 30px;
+  width: 100%;
+  font-size: large;
+  font-family: 'EB Garamond';
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+.button:hover{
+      background-color: gray;
+      cursor: pointer;
+}
+
+.links{
+      color: blue;
+      text-align: center;
+      font-family: 'EB Garamond';
+}

@@ -1,8 +1,33 @@
 /* eslint-disable */
 import styles from "./SignUp.module.css";
 import Link from "next/link";
+import React, { useState } from "react";
+import Axios from "axios";
+
 
 const SignUp = ({ }) => {
+      const [signupusername, setSignUpUsername] = useState("");
+      const [signupemail, setSignUpEmail] = useState("");
+      const [signuppassword, setSignUpPassword] = useState("");
+      const [signupcpassword, setSignUpCPassword] = useState("");
+      const [registerStatus, setRegisterStatus] = useState("");
+
+      const register = (e) => {
+            e.preventDefault();
+            Axios.post("http://localhost:3001/register", {
+                  username: signupusername,
+                  email: signupemail,
+                  password: signuppassword,
+                  cpassword: signupcpassword,
+            }).then((response) => {
+                  if(response.data.message){
+                        setRegisterStatus(response.data.message);
+                  }else{
+                        setRegisterStatus("ACCOUNT CREATED SUCCESSFULLY");
+                  }
+            })
+      }
+
   return (
     <div className={styles.container}>
       <div className={styles.title}>
@@ -16,7 +41,7 @@ const SignUp = ({ }) => {
                         <label>Username </label>
                   </div>
                   <div className={styles.inputs}>
-                        <input type="text" name="password" required />
+                        <input type="text" name="username" onChange={(e) => {setSignUpUsername(e.target.value)}} required />
                   </div>
             </div>
             <div className={styles.input_container}>
@@ -24,7 +49,7 @@ const SignUp = ({ }) => {
                         <label>Email: </label>
                   </div>
                   <div className={styles.inputs}>
-                        <input type="text" name="password" required />
+                        <input type="text" name="email" onChange={(e) => {setSignUpEmail(e.target.value)}} required />
                   </div>
             </div>
             <div className={styles.input_container}>
@@ -32,7 +57,7 @@ const SignUp = ({ }) => {
                         <label>Password: </label>
                   </div>
                   <div className={styles.inputs}>
-                        <input type="password" name="password" required />
+                        <input type="password" name="password" onChange={(e) => {setSignUpPassword(e.target.value)}} required />
                   </div>
             </div>
             <div className={styles.input_container}>
@@ -40,11 +65,12 @@ const SignUp = ({ }) => {
                         <label>Re-enter Password </label>
                   </div>
                   <div className={styles.inputs}>
-                        <input type="password" name="password" required />
+                        <input type="cpassword" name="cpassword" onChange={(e) => {setSignUpCPassword(e.target.value)}} required />
                   </div>
             </div>
             <div className={styles.buttons}>
-                  <button className={styles.button} role="button">Sign Up</button>
+                  <button className={styles.button} onClick={register} role="register">Sign Up </button>
+                  <h1 style = {{color: 'red', fontSize: '15px', textAlign: 'center', marginTop: '20px'}} > {registerStatus} </h1>
             </div>
             <div className={styles.small}>
             <h2>Already have an account? <Link href="/" className={styles.links}>Login</Link></h2>

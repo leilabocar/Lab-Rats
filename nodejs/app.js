@@ -1,7 +1,7 @@
 const express = require("express");
 const mysql = require("mysql2");
 const app = express();
-const port = 3000;
+const port = 3001;
 const hostname = '127.0.0.1';
 var bodyParser = require('body-parser');
 var dateTime = require('node-datetime');
@@ -29,7 +29,7 @@ connection.connect(function (err) {
 // DEFAULT PAGE WITH CREATES
 app.get('/', function (req, res) {
     // CREATE DATABASE IF NOT EXISTING YET
-    connection.query("CREATE DATABASE IF NOT EXISTS jade_project",
+    connection.query("CREATE DATABASE IF NOT EXISTS camera",
         function (err, results) {
             if (err) throw err;
             console.log(req.query);

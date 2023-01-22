@@ -47,7 +47,7 @@ const Login = ({ }) => {
                   
             </div>
             <div className={styles.small}>
-                  <Link href="/ForgotPassword" className={styles.links}><h3>Forgot Password?</h3></Link>
+                  <Link href="/ChangePassword" className={styles.links}><h3>Forgot Password?</h3></Link>
             </div>
             <div className={styles.buttons}>
                   <button className={styles.button} onClick={login} role="login" >Login </button>

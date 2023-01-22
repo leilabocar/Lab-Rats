@@ -37,7 +37,7 @@ const SignUp = ({ }) => {
                         <label>Username </label>
                   </div>
                   <div className={styles.inputs}>
-                        <input type="text" name="username"  onChange={(e) => {setSignUpUsername(e.target.value)}} required />
+                        <input type="text" name="username"  onChange={e => setSignUpUsername(e.target.value)} required />
                   </div>
             </div>
             <div className={styles.input_container}>
@@ -45,7 +45,7 @@ const SignUp = ({ }) => {
                         <label>Email: </label>
                   </div>
                   <div className={styles.inputs}>
-                        <input type="text" name="email" onChange={(e) => {setSignUpEmail(e.target.value)}} required />
+                        <input type="text" name="email" onChange={e => setSignUpEmail(e.target.value)} required />
                   </div>
             </div>
             <div className={styles.input_container}>
@@ -53,11 +53,11 @@ const SignUp = ({ }) => {
                         <label>Password: </label>
                   </div>
                   <div className={styles.inputs}>
-                        <input type="password" name="password" onChange={(e) => {setSignUpPassword(e.target.value)}} required />
+                        <input type="password" name="password" onChange={e => setSignUpPassword(e.target.value)} required />
                   </div>
             </div>
             <div className={styles.buttons}>
-            <button className={styles.button} onClick={SignUp} role="SignUp">Sign Up </button>
+            <Link href ="/" ><button className={styles.button} onClick={SignUp} role="SignUp">Sign Up </button></Link>
             </div>
             <div className={styles.small}>
             <h2>Already have an account? <Link href="/" className={styles.links}>Login</Link></h2>

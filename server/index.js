@@ -34,7 +34,6 @@ app.post('/SignUp', (req, res) => {
     const password = req.body.password;
 
     const query = "INSERT INTO account (`username`, `email`, `password`) VALUES (?, ?, ?)";
-
     const query2 = "SELECT * FROM account WHERE username = ?";
     
     db.query(query2, [username], (err, result) => {
@@ -69,6 +68,23 @@ app.post('/login', (req, res, next) => {
         }
     })(req, res, next);
 });
+
+app.post('/changepassword', (req, res) => {
+    const username = req.body.username;
+    const password = req.body.password;
+
+    const query = `UPDATE account SET password = ? WHERE username = ?`;
+    //const query = "INSERT INTO user_accounts (`username`, `password`) VALUES (?, ?)";
+    //const query2 = "SELECT * FROM user_accounts WHERE username = ?";
+
+    const hashedPassword = bcrypt.hashSync(password, 10);
+    db.query(query, [hashedPassword, username], (err, result) => {
+        if(err) {throw err;}
+        res.send({message: "Account password updated!"});
+    })
+
+});
+
 
 app.get('/getUser', (req, res) => {
     res.send.apply(req.user);

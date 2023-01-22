@@ -1,29 +1,25 @@
 /* eslint-disable */
 import styles from "./Login.module.css";
 import Link from "next/link";
-import React, { useState } from "react";
-import Axios from "axios";
+import { useState } from "react";
+import axios from "axios";
 
 
 const Login = ({ }) => {
-      const [loginusername, setLoginUsername] = useState("");
-      const [loginpassword, setLoginPassword] = useState("");
-      const [loginStatus, setLoginStatus] = useState("");
+      const [ loginusername, setLoginUsername ] = useState('');
+      const [ loginpassword, setLoginPassword ] = useState('');
 
-      const login = (e) => {
-            e.preventDefault();
-            Axios.post("http://localhost:3001/login", {
-                  username: loginusername,
-                  password: loginpassword,
-            }).then((response) => {
-                  if(response.data.message){
-                        setLoginStatus(response.data.message);
-                  }else{
-                        setLoginStatus(response.data[0].email);
-                  }
-            })
-      }
-
+      const login = () => {
+            axios({
+                method: "post",
+                data: {
+                    username: loginusername,
+                    password: loginpassword
+                },
+                withCredentials: true,
+                url: "http://localhost:3001/login"
+            }).then(res => console.log(res)).catch(err => console.log(err)); 
+        }
 
   return (
     <div className={styles.container}>
@@ -54,8 +50,7 @@ const Login = ({ }) => {
                   <Link href="/ForgotPassword" className={styles.links}><h3>Forgot Password?</h3></Link>
             </div>
             <div className={styles.buttons}>
-                  <button className={styles.button} onClick={login} >Login </button>
-                  <h1 style = {{color: 'red', fontSize: '15px', textAlign: 'center', marginTop: '20px'}} > {loginStatus} </h1> 
+                  <button className={styles.button} onClick={login} role="login" >Login </button>
             </div>
             <div className={styles.bottom}>
                   <h2>New Here? <Link href="/SignUp" className={styles.links}>Sign Up?</Link></h2>

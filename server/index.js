@@ -1,57 +1,79 @@
 const express = require("express");
+const boddParser = require("body-parser");
 const cors = require("cors");
-const mysql = require("mysql2");
+const passport = require("passport");
+const expressSession = require("express-session");
+const cookieParser = require("cookie-parser");
+const bcrypt = require("bcrypt");
+const db = require('./db');
 
 const app = express();
 
-app.use(express.json());
-app.use(cors());
+app.use(boddParser.json());
+app.use(boddParser.urlencoded({ extended: true}));
+app.use(expressSession({ secret: 'mySecretKey', resave: false, saveUninitialized: false}));
 
-const con = mysql.createConnection(
-    {
-        user: "root",
-        host: "localhost",
-        password: "",
-        database: "register"
-    }
-)
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+}));
 
-app.post('/register', (req, res) => {
+app.use(cookieParser('mySecretKey'));
+
+app.use(passport.initialize());
+app.use(passport.session());
+require("./passportConfig")(passport);
+
+app.get('/', (req, res) => {
+    res.send("HELLO");
+});
+
+app.post('/SignUp', (req, res) => {
     const username = req.body.username;
     const email = req.body.email;
     const password = req.body.password;
-    const cpassword = req.body.cpassword;
 
-    con.query("INSERT INTO users (username, email, password, cpassword) VALUES(?, ?, ?, ?)", [username, email, password, cpassword],
-        (err, result) => {
-            if(result){
-                res.send(result);
-            }else{
-                res.send({message: "ENTER CORRECT ASKED DETAILS!"})
-            }
+    const query = "INSERT INTO account (`username`, `email`, `password`) VALUES (?, ?, ?)";
+
+    const query2 = "SELECT * FROM account WHERE username = ?";
+    
+    db.query(query2, [username], (err, result) => {
+        if(err) {throw err;}
+        if(result.length > 0) {
+            res.send({message: "Username Already Exist!!"});
         }
-    )
-})
-
-app.post('/login', (req, res) => {
-    const username = req.body.username;
-    const password = req.body.password;
-
-    con.query("SELECT * FROM users WHERE username = ? AND password = ?", [username, password,],
-        (err, result) => {
-            if(err){
-                res.setEnconding({err: err});
-            }else{
-                if(result.length > 0 ){
-                    res.send(result);
-                }else{
-                    res.send({message: "WRONG USERNAME OF PASSWORD"});
-                }
-            }
+        if(result.length === 0){
+            const hashedPassword = bcrypt.hashSync(password, 10);
+            db.query(query, [username, email, hashedPassword], (err, result) => {
+                if(err) {throw err;}
+                res.send({message: "User Created."});
+            })
         }
-    )
-})
+    });
+});
+
+app.post('/login', (req, res, next) => {
+    passport.authenticate('local', (err, user, info) => {
+        if(err) {throw err;}
+        if(!user) {
+            res.send("USER IS EXISTS");
+            }
+
+        if(user) {
+            req.login(user, (err) => {
+                if(err) {throw err;}
+                res.send("USER LOGGED IN.");
+                console.log(user);
+             
+            })
+        }
+    })(req, res, next);
+});
+
+app.get('/getUser', (req, res) => {
+    res.send.apply(req.user);
+});
 
 app.listen(3001, () => {
-    console.log("Server started on port 3001");
+    console.log("Server Started on port 3001")
 });

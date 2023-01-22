@@ -39,6 +39,7 @@ app.post('/signup', (req, res) => {
     db.query(query2, [username], (err, result) => {
         if(err) {throw err;}
         if(result.length > 0) {
+            console.log("Username Already Exist!!")
             res.send({message: "Username Already Exist!!"});
         }
         if(result.length === 0){

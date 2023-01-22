@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
     res.send("HELLO");
 });
 
-app.post('/SignUp', (req, res) => {
+app.post('/signup', (req, res) => {
     const username = req.body.username;
     const email = req.body.email;
     const password = req.body.password;
@@ -45,6 +45,7 @@ app.post('/SignUp', (req, res) => {
             const hashedPassword = bcrypt.hashSync(password, 10);
             db.query(query, [username, email, hashedPassword], (err, result) => {
                 if(err) {throw err;}
+                console.log("User Created.")
                 res.send({message: "User Created."});
             })
         }
@@ -55,12 +56,14 @@ app.post('/login', (req, res, next) => {
     passport.authenticate('local', (err, user, info) => {
         if(err) {throw err;}
         if(!user) {
-            res.send("USER IS EXISTS");
+            console.log("USER IS NOT EXIST!")
+            res.send("USER IS NOT EXIST!");
             }
 
         if(user) {
             req.login(user, (err) => {
                 if(err) {throw err;}
+                console.log("USER LOGGED IN.")
                 res.send("USER LOGGED IN.");
                 console.log(user);
              
@@ -80,6 +83,7 @@ app.post('/changepassword', (req, res) => {
     const hashedPassword = bcrypt.hashSync(password, 10);
     db.query(query, [hashedPassword, username], (err, result) => {
         if(err) {throw err;}
+        console.log("Account Password Change")
         res.send({message: "Account password updated!"});
     })
 

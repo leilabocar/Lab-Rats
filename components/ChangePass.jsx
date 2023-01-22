@@ -3,8 +3,9 @@ import styles from "./ChangePass.module.css";
 import Link from "next/link";
 import { useState } from "react";
 import axios from "axios";
+import React from "react";
 
-const ChangePass = ({ }) => {
+const ChangePass = () => {
 
       const [ changeUsername, setchangeUsername ] = useState('');
       const [ changePassword, setchangePassword ] = useState('');
@@ -18,7 +19,7 @@ const ChangePass = ({ }) => {
               },
               withCredentials: true,
               url: "http://localhost:3001/changepassword"
-          }).then((res) => console.log(res)).catch((err) => console.log(err));
+            }).then(res => console.log(res)).catch(err => console.log(err)); 
       }
   
   return (
@@ -36,24 +37,24 @@ const ChangePass = ({ }) => {
             </div>
             <form className={styles.main_input_container}>
                   <div>
-                        <input type="username" name="username" onChange={(e) => {setchangeUsername(e.target.value)}} required/>
+                        <input type="username" name="username" onChange={e => setchangeUsername(e.target.value)} required/>
                   </div> 
             </form>
       </div>
       <div className={styles.input_container}>
             <div>
-                  <label className={styles.labels}>Password:</label>
+                  <label className={styles.labels}>New Password:</label>
             </div>
             <form className={styles.main_input_container}>
                   <div>
-                        <input type="password" onChange={(e) => {setchangePassword(e.target.value)}} required/>
+                        <input type="password" name="password" onChange={e => setchangePassword(e.target.value)} required/>
                   </div>
                   <div className={styles.buttons}>
                         <span>
                               <Link href ="/" ><button className={styles.button} role="button">Close</button></Link>
                         </span>
                         <span>
-                              <button className={styles.button} onClick={changepassword} role="button">Confirm</button>
+                        <button className={styles.button} onClick={changepassword} role="button">Confirm</button>
                         </span>
                   </div>
             </form>

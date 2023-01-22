@@ -3,14 +3,16 @@ import styles from "./SignUp.module.css";
 import Link from "next/link";
 import { useState } from "react";
 import axios from "axios";
+import React from "react";
 
 
-const SignUp = ({ }) => {
+const SignUp = () => {
       const [ signupusername, setSignUpUsername ] = useState('');
       const [ signupemail, setSignUpEmail ] = useState('');
       const [ signuppassword, setSignUpPassword ] = useState('');
 
-      const SignUp = () => {
+
+      const signup = () => {
             axios({
                 method: "post",
                 data: {
@@ -19,9 +21,9 @@ const SignUp = ({ }) => {
                     password: signuppassword
                 },
                 withCredentials: true,
-                url: "http://localhost:3001/SignUp"
-            }).then((res) => console.log(res)).catch((err) => console.log(err));
-        }
+                url: "http://localhost:3001/signup"
+            }).then(res => console.log(res)).catch(err => console.log(err)); 
+        };
         
 
   return (
@@ -57,7 +59,7 @@ const SignUp = ({ }) => {
                   </div>
             </div>
             <div className={styles.buttons}>
-            <Link href ="/" ><button className={styles.button} onClick={SignUp} role="SignUp">Sign Up </button></Link>
+            <button className={styles.button} onClick={signup} role="submit">Sign Up </button>
             </div>
             <div className={styles.small}>
             <h2>Already have an account? <Link href="/" className={styles.links}>Login</Link></h2>

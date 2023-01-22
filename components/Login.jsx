@@ -5,7 +5,7 @@ import { useState } from "react";
 import axios from "axios";
 
 
-const Login = ({ }) => {
+const Login = () => {
       const [ loginusername, setLoginUsername ] = useState('');
       const [ loginpassword, setLoginPassword ] = useState('');
 
@@ -34,7 +34,7 @@ const Login = ({ }) => {
                         <label className={styles.labels}>Username:</label>
                   </span>
                   <span>
-                        <input type="text" name="username" onChange={(e) => {setLoginUsername(e.target.value)}} required />
+                        <input type="text" name="username" onChange={e => setLoginUsername(e.target.value)} required />
                   </span>
             </div>
             <div className={styles.input_container}>
@@ -42,7 +42,7 @@ const Login = ({ }) => {
                         <label className={styles.labels}>Password: </label>
                   </span>
                   <span>
-                        <input type="password" name="password" onChange={(e) => {setLoginPassword(e.target.value)}} required />
+                        <input type="password" name="password" onChange={e => setLoginPassword(e.target.value)} required />
                   </span>
                   
             </div>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import React from "react";
+import { useRouter } from "next/router";
 
 const SignUp = () => {
 
@@ -11,6 +12,8 @@ const SignUp = () => {
       const [ signupemail, setSignUpEmail ] = useState('');
       const [ signuppassword, setSignUpPassword ] = useState('');
       const [ signupcpassword, setSignUpCPassword ] = useState('');
+      const [ signupstatus, setSignUpStatus ] = useState('');
+      const router = useRouter();
 
       const signup = () => {
             axios({
@@ -23,9 +26,14 @@ const SignUp = () => {
                 },
                 withCredentials: true,
                 url: "http://localhost:3001/signup"
-            }).then(res => console.log(res)).catch(err => console.log(err)); 
+            }).then((response) => {
+                  if(response.data.message == "Username Already Exist!!"){
+                        setSignUpStatus(response.data.message);
+                  }else{
+                        router.push("/");
+                  }
+            })
         };
-        
 
   return (
     <div className={styles.container}>
@@ -68,7 +76,8 @@ const SignUp = () => {
                   </div>
             </div>
             <div className={styles.buttons}>
-            <button className={styles.button} onClick={signup} role="submit">Sign Up </button>
+            <button className={styles.button} onClick={signup} type="submit">Sign Up </button>
+            <h1 style={{color: 'red', fontSize: '15px', textAlign:'center', marginTop: '20px'}}>{signupstatus}</h1>
             </div>
             <div className={styles.small}>
             <h2>Already have an account? <Link href="/" className={styles.links}>Login</Link></h2>

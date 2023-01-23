@@ -54,7 +54,7 @@
 .sign_up {
     font-size: 28px;
     margin-right: 50px;
-    background-color: rgb(252, 174, 245);
+    background-color: rgb(245, 177, 241);
     color: black;
     border-style: outset;
     border-width: 3px;
@@ -70,19 +70,4 @@
     background-color: rgb(243, 107, 225);
     color: black;
     cursor: pointer;
-}
-.p1 {
-position: absolute;
-width: 516px;
-height: 531px;
-left: 58px;
-top: 141px;
-
-font-family: 'Gupter';
-font-style: normal;
-font-weight: 700;
-font-size: 100px;
-line-height: 115px;
-
-color: #000000;
 }

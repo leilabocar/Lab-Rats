@@ -32,8 +32,9 @@ app.post('/signup', (req, res) => {
     const username = req.body.username;
     const email = req.body.email;
     const password = req.body.password;
+    const cpassword = req.body.cpassword;
 
-    const query = "INSERT INTO account (`username`, `email`, `password`) VALUES (?, ?, ?)";
+    const query = "INSERT INTO account (`username`, `email`, `password`, `cpassword`) VALUES (?, ?, ?, ?)";
     const query2 = "SELECT * FROM account WHERE username = ?";
     
     db.query(query2, [username], (err, result) => {
@@ -44,7 +45,8 @@ app.post('/signup', (req, res) => {
         }
         if(result.length === 0){
             const hashedPassword = bcrypt.hashSync(password, 10);
-            db.query(query, [username, email, hashedPassword], (err, result) => {
+            const hashedCPassword = bcrypt.hashSync(cpassword, 10);
+            db.query(query, [username, email, hashedPassword, hashedCPassword], (err, result) => {
                 if(err) {throw err;}
                 console.log("User Created.")
                 res.send({message: "User Created."});
@@ -57,8 +59,8 @@ app.post('/login', (req, res, next) => {
     passport.authenticate('local', (err, user, info) => {
         if(err) {throw err;}
         if(!user) {
-            console.log("USER IS NOT EXIST!")
-            res.send("USER IS NOT EXIST!");
+            console.log("USER DOES NOT EXIST!")
+            res.send("USER DOES NOT EXIST!");
             }
 
         if(user) {

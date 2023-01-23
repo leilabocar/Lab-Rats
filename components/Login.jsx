@@ -8,8 +8,11 @@ import { useRouter } from 'next/router';
 const Login = () => {
       const [ loginusername, setLoginUsername ] = useState('');
       const [ loginpassword, setLoginPassword ] = useState('');
+      const [ loginstatus, setLoginStatus ] = useState('');
+      const router = useRouter();
 
-      const login = () => {
+      const login = (e) => {
+            e.preventDefault();
             axios({
                 method: "post",
                 data: {
@@ -18,8 +21,14 @@ const Login = () => {
                 },
                 withCredentials: true,
                 url: "http://localhost:3001/login"
-            }).then(res => console.log(res)).catch(err => console.log(err)); 
-        }
+            }).then((response) => {
+                  if(response.data.message == "USER DOES NOT EXIST!"){
+                        setLoginStatus(response.data.message);
+                  }else{
+                        router.push('/rpi');
+                  }
+            })
+        };
 
   return (
     <div className={styles.container}>
@@ -50,7 +59,8 @@ const Login = () => {
                   <Link href="/ChangePassword" className={styles.links}><h3>Forgot Password?</h3></Link>
             </div>
             <div className={styles.buttons}>
-                  <button className={styles.button} onClick={login} role="login" >Login </button>
+                  <button className={styles.button} onClick={login} type="login" >Login </button>
+                  <h1 style={{color: 'red', fontSize: '15px', textAlign:'center', marginTop: '20px'}}>{loginstatus}</h1>
             </div>
             <div className={styles.bottom}>
                   <h2>New Here? <Link href="/SignUp" className={styles.links}>Sign Up?</Link></h2>

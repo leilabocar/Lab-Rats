@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    font-family:'Courier New', Courier, monospace;
+    align-items: center;
+    background-color: #FBABA9;
+    width: 100%;
+    height: 80px;
+}
+
+.title {
+    display: flex;
+    margin-left: 50px;
+}
+
+.title > img {
+    margin: 15px 10px 0px 10px;
+}
+
+.title > h1 {
+    font-size: 50px;
+    margin-left: 30px;
+}
+.navbarButtons > a {
+    font-size: 28px;
+    margin-left: 20px;
+    margin-right: 22px;
+}
+
+.navbarButtons > img {
+    border-radius: 20px;
+    align-items: center;
+    margin: 15px 10px 0px 10px;
+    width: 75px;
+    height: 75px;
+}
+
+.log_in {
+    font-weight: bold;
+}
+
+.log_in:hover {
+    text-decoration: underline;
+}
+
+.about_us {
+    font-weight: bold;
+}
+
+.about_us:hover {
+    text-decoration: underline;
+}
+
+.sign_up {
+    font-size: 28px;
+    margin-right: 50px;
+    background-color: rgb(245, 177, 241);
+    color: black;
+    border-style: outset;
+    border-width: 3px;
+    border-radius:10px;
+    border-color: black;
+    height: 55px;
+    width: 125px;
+
+}
+
+.sign_up:hover {
+    transition-duration: 0.3s;
+    background-color: rgb(243, 107, 225);
+    color: black;
+    cursor: pointer;
+}

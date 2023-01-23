@@ -1,32 +1,31 @@
 /* eslint-disable */
 import styles from "./SignUp.module.css";
 import Link from "next/link";
-import React, { useState } from "react";
-import Axios from "axios";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import React from "react";
 
+const SignUp = () => {
 
-const SignUp = ({ }) => {
-      const [signupusername, setSignUpUsername] = useState("");
-      const [signupemail, setSignUpEmail] = useState("");
-      const [signuppassword, setSignUpPassword] = useState("");
-      const [signupcpassword, setSignUpCPassword] = useState("");
-      const [registerStatus, setRegisterStatus] = useState("");
+      const [ signupusername, setSignUpUsername ] = useState('');
+      const [ signupemail, setSignUpEmail ] = useState('');
+      const [ signuppassword, setSignUpPassword ] = useState('');
+      const [ signupcpassword, setSignUpCPassword ] = useState('');
 
-      const register = (e) => {
-            e.preventDefault();
-            Axios.post("http://localhost:3001/register", {
-                  username: signupusername,
-                  email: signupemail,
-                  password: signuppassword,
-                  cpassword: signupcpassword,
-            }).then((response) => {
-                  if(response.data.message){
-                        setRegisterStatus(response.data.message);
-                  }else{
-                        setRegisterStatus("ACCOUNT CREATED SUCCESSFULLY");
-                  }
-            })
-      }
+      const signup = () => {
+            axios({
+                method: "post",
+                data: {
+                    username: signupusername,
+                    email: signupemail,
+                    password: signuppassword,
+                    cpassword: signupcpassword
+                },
+                withCredentials: true,
+                url: "http://localhost:3001/signup"
+            }).then(res => console.log(res)).catch(err => console.log(err)); 
+        };
+        
 
   return (
     <div className={styles.container}>
@@ -41,7 +40,7 @@ const SignUp = ({ }) => {
                         <label>Username </label>
                   </div>
                   <div className={styles.inputs}>
-                        <input type="text" name="username" onChange={(e) => {setSignUpUsername(e.target.value)}} required />
+                        <input type="text" name="username"  onChange={e => setSignUpUsername(e.target.value)} required />
                   </div>
             </div>
             <div className={styles.input_container}>
@@ -49,7 +48,7 @@ const SignUp = ({ }) => {
                         <label>Email: </label>
                   </div>
                   <div className={styles.inputs}>
-                        <input type="text" name="email" onChange={(e) => {setSignUpEmail(e.target.value)}} required />
+                        <input type="text" name="email" onChange={e => setSignUpEmail(e.target.value)} required />
                   </div>
             </div>
             <div className={styles.input_container}>
@@ -57,7 +56,7 @@ const SignUp = ({ }) => {
                         <label>Password: </label>
                   </div>
                   <div className={styles.inputs}>
-                        <input type="password" name="password" onChange={(e) => {setSignUpPassword(e.target.value)}} required />
+                  <input type="password" name="password" onChange={e => setSignUpPassword(e.target.value)} required />
                   </div>
             </div>
             <div className={styles.input_container}>
@@ -65,12 +64,11 @@ const SignUp = ({ }) => {
                         <label>Re-enter Password </label>
                   </div>
                   <div className={styles.inputs}>
-                        <input type="cpassword" name="cpassword" onChange={(e) => {setSignUpCPassword(e.target.value)}} required />
+                        <input type="password" name="cpassword" onChange={e => setSignUpCPassword(e.target.value)} required />
                   </div>
             </div>
             <div className={styles.buttons}>
-                  <button className={styles.button} onClick={register} role="register">Sign Up </button>
-                  <h1 style = {{color: 'red', fontSize: '15px', textAlign: 'center', marginTop: '20px'}} > {registerStatus} </h1>
+            <button className={styles.button} onClick={signup} role="submit">Sign Up </button>
             </div>
             <div className={styles.small}>
             <h2>Already have an account? <Link href="/" className={styles.links}>Login</Link></h2>

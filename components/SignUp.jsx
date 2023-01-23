@@ -1,10 +1,10 @@
 /* eslint-disable */
 import styles from "./SignUp.module.css";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import React from "react";
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router'
 
 const SignUp = () => {
 
@@ -15,7 +15,8 @@ const SignUp = () => {
       const [ signupstatus, setSignUpStatus ] = useState('');
       const router = useRouter();
 
-      const signup = () => {
+      const signup = (e) => {
+            e.preventDefault();
             axios({
                 method: "post",
                 data: {
@@ -30,10 +31,10 @@ const SignUp = () => {
                   if(response.data.message == "Username Already Exist!!"){
                         setSignUpStatus(response.data.message);
                   }else{
-                        router.push("/");
+                        router.push('/SignIn');
                   }
             })
-        };
+        }
 
   return (
     <div className={styles.container}>
@@ -80,7 +81,7 @@ const SignUp = () => {
             <h1 style={{color: 'red', fontSize: '15px', textAlign:'center', marginTop: '20px'}}>{signupstatus}</h1>
             </div>
             <div className={styles.small}>
-            <h2>Already have an account? <Link href="/" className={styles.links}>Login</Link></h2>
+            <h2>Already have an account? <Link href="/SignIn" className={styles.links}>Login</Link></h2>
             </div>
             
       </form>

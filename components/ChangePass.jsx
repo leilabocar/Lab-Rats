@@ -4,13 +4,17 @@ import Link from "next/link";
 import { useState } from "react";
 import axios from "axios";
 import React from "react";
+import { useRouter } from 'next/router'
 
 const ChangePass = () => {
 
       const [ changeUsername, setchangeUsername ] = useState('');
       const [ changePassword, setchangePassword ] = useState('');
+      const [ changestatus, setchangeStatus ] = useState('');
+      const router = useRouter();
   
-      const changepassword = () => {
+      const changepassword = (e) => {
+            e.preventDefault();
           axios({
               method: "post",
               data: {
@@ -19,8 +23,17 @@ const ChangePass = () => {
               },
               withCredentials: true,
               url: "http://localhost:3001/changepassword"
-            }).then(res => console.log(res)).catch(err => console.log(err)); 
-      }
+            }).then((response) => {
+                  if(response.ok){
+                        return setSignUpStatus(response.data.message);
+                  }
+                  {
+                        router.push('/SignIn');
+                  }
+            })
+        }
+
+
   
   return (
     <div className={styles.container}>
@@ -54,7 +67,8 @@ const ChangePass = () => {
                               <Link href ="/" ><button className={styles.button} role="button">Close</button></Link>
                         </span>
                         <span>
-                        <button className={styles.button} onClick={changepassword} role="button">Confirm</button>
+                        <button className={styles.button} onClick={changepassword} type="button">Confirm</button>
+                        <h1 style={{color: 'red', fontSize: '15px', textAlign:'center', marginTop: '20px'}}>{changestatus}</h1>
                         </span>
                   </div>
             </form>

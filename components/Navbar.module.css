@@ -54,7 +54,7 @@
 .sign_up {
     font-size: 28px;
     margin-right: 50px;
-    background-color: gold;
+    background-color: rgb(252, 174, 245);
     color: black;
     border-style: outset;
     border-width: 3px;
@@ -67,7 +67,7 @@
 
 .sign_up:hover {
     transition-duration: 0.3s;
-    background-color: grey;
+    background-color: rgb(243, 107, 225);
     color: black;
     cursor: pointer;
 }

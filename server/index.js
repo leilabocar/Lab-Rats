@@ -96,29 +96,7 @@ app.get('/getUser', (req, res) => {
     res.send.apply(req.user);
 });
 
-app.get("/displaycam", (req, res) => {
-    connection.query(
-        "SELECT * FROM camera",
-        function (err, results) {
-            if (err) throw err;
-            try {
-                if (results.length > 0) {
-                    let base64array = [];
-                    for (let i = 0; i < results.length; i++) {
-                        base64array.push({
-                            data: new Buffer.from(results[i].image).toString("utf8"),
-                        });
-                    }
-                    res.json(base64array);
-                    console.log(results);
-                }
-            }
-            catch (err) {
-                res.json({ message: err });
-            }
 
-        })
-});
 
 app.listen(3001, () => {
     console.log("Server Started on port 3001")

@@ -2,8 +2,9 @@
 import styles from "./Login.module.css";
 import Link from "next/link";
 import { useState } from "react";
+import React from "react";
 import axios from "axios";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 
 const Login = () => {
       const [ loginusername, setLoginUsername ] = useState('');
@@ -25,7 +26,7 @@ const Login = () => {
                   if(response.data.message == "USER DOES NOT EXIST!"){
                         setLoginStatus(response.data.message);
                   }else{
-                        router.push('/rpi');
+                        router.push('/rpi')
                   }
             })
         };

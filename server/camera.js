@@ -14,11 +14,6 @@ const connection = mysql.createConnection({
     database: "login_signup",
 });
 
-// Home
-app.get("/", (req, res) => {
-    console.log(req.query);
-    res.send("Hello");
-});
 
 // CREATE
 app.post("/motion", (req, res) => {
@@ -36,30 +31,6 @@ app.post("/motion", (req, res) => {
       }
     );
   });
-
-  app.get("/rpi", (req, res) => {
-    connection.query(
-        "SELECT * FROM camera",
-        function (err, results) {
-            if (err) throw err;
-            try {
-                if (results.length > 0) {
-                    let base64array = [];
-                    for (let i = 0; i < results.length; i++) {
-                        base64array.push({
-                            data: new Buffer.from(results[i].image).toString("utf8"),
-                        });
-                    }
-                    res.json(base64array);
-                    console.log(results);
-                }
-            }
-            catch (err) {
-                res.json({ message: err });
-            }
-
-        })
-});
 
 
 app.listen(port, () => {

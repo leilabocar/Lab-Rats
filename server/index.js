@@ -7,7 +7,7 @@ const cookieParser = require("cookie-parser");
 const bcrypt = require("bcrypt");
 const db = require('./db');
 const motion = require('./camera')
-
+const mysql = require("mysql2");
 const app = express();
 
 app.use(boddParser.json());
@@ -96,6 +96,45 @@ app.get('/getUser', (req, res) => {
     res.send.apply(req.user);
 });
 
+// app.post("/motion", (req, res) => {
+//     console.log(req.body.photo)
+//       // insert query to database
+//       connection.execute(
+//         "INSERT INTO camera (start, end, photo) VALUES(?, ?, ?)",
+//         [req.body.start, req.body.end, req.body.photo],
+//         (err, results) => {
+//           if (results?.affectedRows > 0) {
+//             res.json({ message: "New data has been added!" });
+//           } else {
+//             res.json({ message: err });
+//           }
+//         }
+//       );
+//     });
+
+app.get("/rpi", (req, res) => {
+      connection.query(
+          "SELECT * FROM camera",
+          function (err, results) {
+              if (err) throw err;
+              try {
+                  if (results.length > 0) {
+                      let base64array = [];
+                      for (let i = 0; i < results.length; i++) {
+                          base64array.push({
+                              data: new Buffer.from(results[i].image).toString("utf8"),
+                          });
+                      }
+                      res.json(base64array);
+                      console.log(results);
+                  }
+              }
+              catch (err) {
+                  res.json({ message: err });
+              }
+  
+          })
+});
 
 
 app.listen(3001, () => {

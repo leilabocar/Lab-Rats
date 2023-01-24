@@ -59,15 +59,13 @@ app.post('/login', (req, res, next) => {
     passport.authenticate('local', (err, user, info) => {
         if(err) {throw err;}
         if(!user) {
-            console.log("USER DOES NOT EXIST!")
-            res.send("USER DOES NOT EXIST!");
+            res.send({message: "USER DOES NOT EXIST!"});
             }
 
         if(user) {
             req.login(user, (err) => {
                 if(err) {throw err;}
-                console.log("USER LOGGED IN.")
-                res.send("USER LOGGED IN.");
+                res.send({message: "USER LOGGED IN."});
                 console.log(user);
              
             })

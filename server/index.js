@@ -6,6 +6,7 @@ const expressSession = require("express-session");
 const cookieParser = require("cookie-parser");
 const bcrypt = require("bcrypt");
 const db = require('./db');
+const motion = require('./camera')
 
 const app = express();
 
@@ -23,7 +24,7 @@ app.use(cookieParser('mySecretKey'));
 app.use(passport.initialize());
 app.use(passport.session());
 require("./passportConfig")(passport);
-
+require("./camera");
 app.get('/', (req, res) => {
     res.send("HELLO");
 });
@@ -93,6 +94,30 @@ app.post('/changepassword', (req, res) => {
 
 app.get('/getUser', (req, res) => {
     res.send.apply(req.user);
+});
+
+app.get("/displaycam", (req, res) => {
+    connection.query(
+        "SELECT * FROM camera",
+        function (err, results) {
+            if (err) throw err;
+            try {
+                if (results.length > 0) {
+                    let base64array = [];
+                    for (let i = 0; i < results.length; i++) {
+                        base64array.push({
+                            data: new Buffer.from(results[i].image).toString("utf8"),
+                        });
+                    }
+                    res.json(base64array);
+                    console.log(results);
+                }
+            }
+            catch (err) {
+                res.json({ message: err });
+            }
+
+        })
 });
 
 app.listen(3001, () => {

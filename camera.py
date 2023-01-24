@@ -77,7 +77,7 @@ while True:
           print("Motion Detected! ", datetime.now())
           cv2.putText(frame, f'Datetime: {datetime.now() .strftime("%Y%m%d-%H%M%S")}',(10,50), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 2, cv2.LINE_AA)
          
-          url = 'http://localhost:4000/camera'
+          url = 'http://localhost:5000/camera'
 
           image_encoded = cv2.imencode('.jpg', frame)[1]
           image_data = base64.b64encode(image_encoded)

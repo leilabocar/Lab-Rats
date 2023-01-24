@@ -1,6 +1,7 @@
 import styles from "./rpipage.module.css";
 import Link from 'next/link';
-import { useState, useEffect } from "react";
+import React from "react";
+import { useState, useEffect } from 'react';
 
 const rpipage = () => {
 //       const [data, setData] = useState(null)
@@ -52,31 +53,31 @@ const rpipage = () => {
 //             </div>
 //       </div>
 //     );
-      const [data, setData] = useState(null);
-       const [isLoading, setLoading] = useState(false);
+const [data, setData] = useState(null);
+const [isLoading, setLoading] = useState(false);
 
-  useEffect(() => {
-    async function getPageData(){
-        const response = await fetch('http://localhost:3001/rpi');
-        const res = await response.json();
-        setData(res.data);
-    }
-    getPageData();
-    // setLoading(true)
-    // fetch('http://192.168.18.5:3080/displaycam')
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     setData(data)
-    //     setLoading(false)
-    //   })
-  }, [])
+useEffect(() => {
+  async function getPageData(){
+      const response = await fetch('http://localhost:3002/rpi');
+      const res = await response.json();
+      setData(res.data);
+  }
+  getPageData();
+  // setLoading(true)
+  // fetch('http://192.168.18.5:3080/displaycam')
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     setData(data)
+  //     setLoading(false)
+  //   })
+}, [])
 
-  if (isLoading) return <p>Loading...</p>
-  if (!data) return <p>No profile data</p>
+if (isLoading) return <p>Loading...</p>
+if (!data) return <p>No profile data</p>
 
-  const image_set = 'data:photo/png;base64,';
-  const current_date = new Date();
-  const date = `${current_date.getDate()}/${current_date.getMonth()+1}/${current_date.getFullYear()}`
+const image_set = 'data:image/png;base64,';
+const current_date = new Date();
+const date = `${current_date.getDate()}/${current_date.getMonth()+1}/${current_date.getFullYear()}`
 
     return (
         

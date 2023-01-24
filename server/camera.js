@@ -58,7 +58,7 @@ app.post("/motion", (req, res) => {
 // });
 app.get("/display", (req, res) => {
   connection.query(
-      "SELECT * FROM `camera` ORDER BY id DESC",
+      "SELECT * FROM `camera` ORDER BY start",
       function (err, results) {
           if (err) throw err;
           try {

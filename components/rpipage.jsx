@@ -20,8 +20,8 @@ const rpipage = () => {
     if (!data) return <p>No profile data</p>
     
     const image_set = 'data:image/png;base64,';
-    const current_date = new Date();
-    const date = `${current_date.getDate()}/${current_date.getMonth()+1}/${current_date.getFullYear()}`
+    const now = new Date();
+    const date = `${now.getMonth()+1}/${now.getDate()}/${now.getFullYear()}`
     
 
     return (
@@ -44,10 +44,11 @@ const rpipage = () => {
             <div className={styles.pictures}>
             {data ? data.map(datas =>(
                   <div className={styles.pics}>
-                        <p>{date}</p>
                         <img src={image_set + Buffer.from(datas.photo).toString('utf-8')}></img>
+                        <p> Date Taken: {datas.start} </p>
+                        
                   </div>
-                  )) :(<p> Loading </p>)}
+                  )) :(<p></p>)}
             </div>
       </div>
     );

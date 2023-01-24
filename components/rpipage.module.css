@@ -66,16 +66,26 @@
       justify-content: space-evenly;
       width: 100%;
       padding-top: 20px;
+      flex-wrap: wrap;
+      gap: 5px;
 }
 
 .pics{
       width: 100%;
       height: 380px;
       max-width: 380px;
-      background-color: black;
+      flex: 1 0 25%;
+      margin-bottom: 10px;
+      background-color: #FBABA9 ;
+}
+.pics > p{
+      font-family: 'Gupter';
+      font-size: 20px;
+      
 }
 .pics > img{
       width: 100%;
-      height: 100%;
+      height: 300px;
       max-width: 380px;
+      flex: 1 0 21%;
 }

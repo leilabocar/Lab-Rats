@@ -6,7 +6,8 @@ const expressSession = require("express-session");
 const cookieParser = require("cookie-parser");
 const bcrypt = require("bcrypt");
 const db = require('./db');
-
+const motion = require('./camera')
+const mysql = require("mysql2");
 const app = express();
 
 app.use(boddParser.json());
@@ -23,7 +24,7 @@ app.use(cookieParser('mySecretKey'));
 app.use(passport.initialize());
 app.use(passport.session());
 require("./passportConfig")(passport);
-
+require("./camera");
 app.get('/', (req, res) => {
     res.send("HELLO");
 });
@@ -94,6 +95,23 @@ app.post('/changepassword', (req, res) => {
 app.get('/getUser', (req, res) => {
     res.send.apply(req.user);
 });
+
+// app.post("/motion", (req, res) => {
+//     console.log(req.body.photo)
+//       // insert query to database
+//       connection.execute(
+//         "INSERT INTO camera (start, end, photo) VALUES(?, ?, ?)",
+//         [req.body.start, req.body.end, req.body.photo],
+//         (err, results) => {
+//           if (results?.affectedRows > 0) {
+//             res.json({ message: "New data has been added!" });
+//           } else {
+//             res.json({ message: err });
+//           }
+//         }
+//       );
+//     });
+
 
 app.listen(3001, () => {
     console.log("Server Started on port 3001")

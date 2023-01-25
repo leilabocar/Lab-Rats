@@ -72,7 +72,7 @@ while True:
                        cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
   
     for contour in cnts:
-        if cv2.contourArea(contour) < 10000:
+        if cv2.contourArea(contour) < 100:
             continue
         motion = 1
   

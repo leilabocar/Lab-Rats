@@ -21,7 +21,7 @@ const Login = () => {
                     password: loginpassword
                 },
                 withCredentials: true,
-                url: "http://localhost:3001/login"
+                url: "http://192.168.18.84:3001/login"
             }).then((response) => {
                   if(response.data.message == "USER DOES NOT EXIST!"){
                         setLoginStatus(response.data.message);

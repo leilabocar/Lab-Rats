@@ -10,7 +10,7 @@ const Rpipage = () => {
     
     useEffect(() => {
       async function getPageData(){
-          const response = await fetch('http://localhost:3002/display');
+          const response = await fetch('http://192.168.18.84:3002/display');
           const res = await response.json();
           setData(res.data);
       }

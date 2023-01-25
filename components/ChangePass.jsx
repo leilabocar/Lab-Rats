@@ -22,7 +22,7 @@ const ChangePass = () => {
                   password: changePassword
               },
               withCredentials: true,
-              url: "http://localhost:3001/changepassword"
+              url: "http://192.168.18.84:3001/changepassword"
             }).then((response) => {
                   if(response.ok){
                         return setSignUpStatus(response.data.message);
@@ -64,7 +64,7 @@ const ChangePass = () => {
                   </div>
                   <div className={styles.buttons}>
                         <span>
-                              <Link href ="/" ><button className={styles.button} role="button">Close</button></Link>
+                              <Link href ="/SignIn" ><button className={styles.button} role="button">Close</button></Link>
                         </span>
                         <span>
                         <button className={styles.button} onClick={changepassword} type="button">Confirm</button>

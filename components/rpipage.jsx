@@ -1,9 +1,10 @@
+/* eslint-disable */
 import styles from "./rpipage.module.css";
 import Link from 'next/link';
 import React from "react";
 import { useState, useEffect } from 'react';
 
-const rpipage = () => {
+const Rpipage = () => {
     const [data, setData] = useState(null);
     const [isLoading, setLoading] = useState(false);
     
@@ -94,4 +95,4 @@ const rpipage = () => {
     // );
   };
   
-  export default rpipage;
+  export default Rpipage;

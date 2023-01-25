@@ -26,7 +26,7 @@ const SignUp = () => {
                     cpassword: signupcpassword
                 },
                 withCredentials: true,
-                url: "http://192.168.18.84:3001/signup"
+                url: "http://192.168.43.220:3001/signup"
             }).then((response) => {
                   if(response.data.message == "Username Already Exist!!"){
                         setSignUpStatus(response.data.message);

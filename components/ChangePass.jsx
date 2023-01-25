@@ -22,7 +22,7 @@ const ChangePass = () => {
                   password: changePassword
               },
               withCredentials: true,
-              url: "http://192.168.18.84:3001/changepassword"
+              url: "http://192.168.43.220:3001/changepassword"
             }).then((response) => {
                   if(response.ok){
                         return setSignUpStatus(response.data.message);
